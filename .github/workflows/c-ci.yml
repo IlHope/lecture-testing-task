@@ -1,0 +1,28 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install GCC and tooling
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc build-essential
+
+      - name: Build tests with address sanitizer
+        run: |
+          gcc -fsanitize=address -g 05_hw/stack.c 05_hw/tests.c -o tests.exe
+
+      - name: Run tests
+        run: |
+          ./tests.exe
