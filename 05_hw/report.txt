@@ -1,0 +1,17 @@
+Running: cppcheck --enable=all --template={"file":"{file}","line":{line},"column":{column},"severity":"{severity}","message":"{message}","id":"{id}"} c:\Users\User\Desktop\works\lecture-testing-task-main\05_hw\
+
+Checking c:\Users\User\Desktop\works\lecture-testing-task-main\05_hw\stack.h ...
+{"file":"c:\\Users\\User\\Desktop\\works\\lecture-testing-task-main\\05_hw\\stack.h","line":1,"column":0,"severity":"information","message":"Include file: <stdbool.h> not found. Please note: Cppcheck does not need standard library headers to get proper results.","id":"missingIncludeSystem"},
+
+Checking c:\Users\User\Desktop\works\lecture-testing-task-main\05_hw\stack.c ...
+{"file":"c:\\Users\\User\\Desktop\\works\\lecture-testing-task-main\\05_hw\\stack.c","line":1,"column":0,"severity":"information","message":"Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results.","id":"missingIncludeSystem"},
+{"file":"c:\\Users\\User\\Desktop\\works\\lecture-testing-task-main\\05_hw\\stack.c","line":2,"column":0,"severity":"information","message":"Include file: <stdlib.h> not found. Please note: Cppcheck does not need standard library headers to get proper results.","id":"missingIncludeSystem"},
+
+{"file":"c:\\Users\\User\\Desktop\\works\\lecture-testing-task-main\\05_hw\\stack.c","line":31,"column":5,"severity":"warning","message":"Returning 0 from pop() may be misleading: 0 is also valid data value.","id":"inconclusiveReturnValue"},
+
+{"file":"c:\\Users\\User\\Desktop\\works\\lecture-testing-task-main\\05_hw\\stack.c","line":16,"column":5,"severity":"style","message":"Parameter stack can be null pointer.","id":"nullPointerRedundantCheck"},
+
+{"file":"c:\\Users\\User\\Desktop\\works\\lecture-testing-task-main\\05_hw\\stack.c","line":67,"column":5,"severity":"style","message":"Found printf without newline. This may cause performance issues.","id":"performancePrintfWithoutNewline"},
+
+Checking c:\Users\User\Desktop\works\lecture-testing-task-main\05_hw\main.c ...
+{"file":"c:\\Users\\User\\Desktop\\works\\lecture-testing-task-main\\05_hw\\main.c","line":3,"column":0,"severity":"information","message":"Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results.","id":"missingIncludeSystem"},
